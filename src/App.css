@@ -1,0 +1,97 @@
+    /* scroll ancre */
+section {
+    scroll-margin-top: 10vh;
+}
+
+    /* Styles de base de la navBar, sans fond visible */
+.navBar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    background: transparent;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    transition: background 0.5s ease-in-out;
+}
+  
+    /* Fond visible au scroll */
+.navBarScrolled {
+    background: rgba(0, 0, 0, 0.7);; 
+    transition: background 0.5s ease-in-out;
+}
+  
+.navLink {
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--pink-flash);
+    text-decoration: none;
+    transition: 0.3s;
+}
+  
+.navLink:hover {
+    font-size: 1.8rem;
+    transition: 0.3s;
+}
+  
+    /* Section Home */
+.home {
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+.fondHome {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.4;
+    position: absolute;
+    object-fit: cover;
+}
+  
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 2;
+    width: 100vw;
+    height: 60vh;
+    color: white;
+}
+
+    /* Section About */
+.about {
+    background-color: var(--background-grey);
+    color: white;
+}
+
+.portrait {
+    border-radius: 50%;
+    width: 300px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+    height: 60vh;
+}
+
+.about-text {
+    width: 50%;
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+
+
+  
