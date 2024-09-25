@@ -19,7 +19,7 @@ section {
   
     /* Fond visible au scroll */
 .navBarScrolled {
-    background: rgba(0, 0, 0, 0.8);; 
+    background: rgba(0, 0, 0, 0.9);; 
     transition: background 0.5s ease-in-out;
 }
   
@@ -65,7 +65,7 @@ section {
     color: white;
 }
 
-/* ------------- Section Ajout ------------- */
+/* ------------- Section About ------------- */
 .about {
     background-color: var(--background-grey);
     color: white;
@@ -86,7 +86,7 @@ section {
   }
   
   .portrait:hover {
-    transform: scale(1.05) rotate(3deg);
+    transform: scale(1.15) rotate(3deg);
     box-shadow: 12px 12px 30px rgba(0, 0, 0, 0.5), -12px -12px 30px rgba(255, 255, 255, 0.15);
   }
   
@@ -160,7 +160,158 @@ section {
     margin: 2rem 0;
     border-radius: 8px;
   }
-  
-      
+
+/* ------------- Section Projects ------------- */
+
+.projects-container {
+  position: relative;
+  padding: 2rem;
+  overflow: visible;
+}
+
+.projects {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  gap: 1rem;
+  padding: 2rem 0;
+  scroll-behavior: smooth;
+}
+
+.project-cell {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), 0 0 15px rgba(118, 199, 192, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.project-cell:first-of-type {
+  margin-left: 2rem;
+}
+
+.project-cell:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2), 0 0 20px rgba(255, 105, 180, 0.4);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.project-title {
+  font-size: 1.3rem;
+  color: #fff;
+  text-align: center;
+  margin-top: 1rem;
+  letter-spacing: 0.05rem;
+}
+
+/* Scrollbar styling */
+.projects::-webkit-scrollbar {
+  height: 8px;
+}
+
+.projects::-webkit-scrollbar-thumb {
+  background-color: var(--blue-flash);
+}
+
+/* Navigation buttons (arrows) */
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, var(--pink-flash), var(--blue-flash));
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3), 0 0 10px rgba(118, 199, 192, 0.2); 
+}
+
+.slider-button.left {
+  left: 10px;
+}
+
+.slider-button.right {
+  right: 10px;
+}
+
+.slider-button:hover {
+  background: linear-gradient(135deg, var(--blue-flash), var(--pink-flash));
+  box-shadow: 0 6px 15px rgba(255, 105, 180, 0.4), 0 0 12px rgba(118, 199, 192, 0.3);
+}
+
+
+/* ProjectDetail.css */
+.project-detail {
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.project-title {
+  color: var(--pink-flash);
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.project-description {
+  color: #ccc;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.image-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  padding: 10px;
+}
+
+.image-carousel img {
+  width: 80%;
+  height: auto;
+  margin: 0 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+.back-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: var(--pink-flash);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: var(--blue-flash);
+}
+
+
+
 
   
